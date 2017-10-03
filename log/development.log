@@ -73,3 +73,37 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 1141ms (Views: 1120.9ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (6.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ms. Lucy Kuhlman"], ["linkedin_connections", 6], ["facebook_friends", 5], ["twitter_followers", 10], ["created_at", "2017-10-03 22:04:37.336033"], ["updated_at", "2017-10-03 22:04:37.336033"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Mrs. Broderick Beatty"], ["linkedin_connections", 22], ["facebook_friends", 23], ["twitter_followers", 21], ["created_at", "2017-10-03 22:04:37.356644"], ["updated_at", "2017-10-03 22:04:37.356644"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ashley Brown"], ["linkedin_connections", 22], ["facebook_friends", 9], ["twitter_followers", 17], ["created_at", "2017-10-03 22:04:37.362366"], ["updated_at", "2017-10-03 22:04:37.362366"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Ms. Ramon Johnston"], ["linkedin_connections", 21], ["facebook_friends", 4], ["twitter_followers", 7], ["created_at", "2017-10-03 22:04:37.371247"], ["updated_at", "2017-10-03 22:04:37.371247"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Emmanuel Emard"], ["linkedin_connections", 5], ["facebook_friends", 9], ["twitter_followers", 18], ["created_at", "2017-10-03 22:04:37.377049"], ["updated_at", "2017-10-03 22:04:37.377049"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Emmie Reichel PhD"], ["linkedin_connections", 21], ["facebook_friends", 17], ["twitter_followers", 11], ["created_at", "2017-10-03 22:04:37.382232"], ["updated_at", "2017-10-03 22:04:37.382232"]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fred Collins"], ["linkedin_connections", 18], ["facebook_friends", 20], ["twitter_followers", 14], ["created_at", "2017-10-03 22:04:37.389972"], ["updated_at", "2017-10-03 22:04:37.389972"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Braeden Upton Sr."], ["linkedin_connections", 8], ["facebook_friends", 6], ["twitter_followers", 5], ["created_at", "2017-10-03 22:04:37.399182"], ["updated_at", "2017-10-03 22:04:37.399182"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Dean Simonis"], ["linkedin_connections", 11], ["facebook_friends", 24], ["twitter_followers", 21], ["created_at", "2017-10-03 22:04:37.404795"], ["updated_at", "2017-10-03 22:04:37.404795"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "linkedin_connections", "facebook_friends", "twitter_followers", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Robb Okuneva"], ["linkedin_connections", 20], ["facebook_friends", 16], ["twitter_followers", 19], ["created_at", "2017-10-03 22:04:37.410205"], ["updated_at", "2017-10-03 22:04:37.410205"]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]

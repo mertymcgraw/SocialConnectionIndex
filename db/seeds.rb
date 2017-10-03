@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do 
+  User.create(
+    name: Faker::Name.name,
+    linkedin_connections: rand(1..25),
+    facebook_friends: rand(1..25),
+    twitter_followers: rand(1..25)
+    )
+  
+end 
