@@ -3,12 +3,13 @@ class User < ApplicationRecord
   validates :linkedin_connections, :facebook_friends, :twitter_followers, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
 
-  def social_connection_index(facebook, linkedin, twitter)
-    total_followers = facebook + linkedin + twitter
+  def social_connection_index
+
+    total_followers = self.linkedin_connections + self.twitter_followers + self.facebook_friends
 
     if total_followers <= 50
       return 1
-    elsif total followers <= 100
+    elsif total_followers <= 100
       return 1.5
     elsif total_followers <= 200
       return 5
