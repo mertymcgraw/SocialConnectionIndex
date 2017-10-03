@@ -5,4 +5,8 @@ class UsersController < ApplicationController
     p @users.last.social_connection_index
 
   end 
+
+  def edit
+    @user = User.find(params[:id])
+  end 
 end
