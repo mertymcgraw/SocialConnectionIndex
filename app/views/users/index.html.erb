@@ -1,1 +1,6 @@
-hi Merty you are so talented 
+<% @users.each do |user| %>
+  <div>
+    <%= user.name %>:
+    <%= user.social_connection_index %> 
+  </div>
+<% end  %>
