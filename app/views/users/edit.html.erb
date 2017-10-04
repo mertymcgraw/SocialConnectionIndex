@@ -1,15 +1,17 @@
+<div class='container'>
+ 
+    <%= form_for(@user) do |f| %>
+      <div class='form-container'>
+        <div>Name: <%= f.text_field :name, placeholder: 'name', :class => 'input-field', :id => 'name-field'%> </div>
 
+        <div>LinkedIn Connections: <%= f.number_field :linkedin_connections, placeholder: 'linkedin_connections', :class => 'input-field' %> </div>
 
-<%= form_for(@user) do |f| %>
-  <%= f.text_field :name, placeholder: 'name', :class => 'input-field' %>
+       <div>Facebook Friends <%= f.number_field :facebook_friends, placeholder: 'facebook_friends', :class => 'input-field' %> </div>
 
+        <div>Twitter Followers: <%= f.number_field :twitter_followers, placeholder: 'twitter_followers', :class => 'input-field' %> </div>
+      </div>
 
-  <%= f.number_field :linkedin_connections, placeholder: 'linkedin_connections', :class => 'input-field' %>
+      <div id='update-button-container'><%= f.submit "Update", :id => 'update-button' %></div>
+    <% end %>
 
-  <%= f.number_field :facebook_friends, placeholder: 'facebook_friends', :class => 'input-field' %>
-
-  <%= f.number_field :twitter_followers, placeholder: 'twitter_followers', :class => 'input-field' %>
-
-
-  <%= f.submit "Update", :class => 'form-submit-button' %>
-<% end %>
+</div>

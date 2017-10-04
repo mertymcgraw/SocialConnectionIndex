@@ -13,3 +13,112 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #4A4A4A;
+  color: white;
+  font-family: 'Courier New';
+}
+
+.container {
+  margin: auto;
+  width: 700px;
+
+}
+
+.user-container{
+  border-bottom: 1px solid #F67523;
+  padding: 20px;
+
+}
+
+.connection-index{
+  display: inline-block;
+  width: 50px;
+  font-size: 24pt;
+  text-align: center;
+
+
+}
+
+.user-details{
+  margin-left: 50px;
+  display: inline-block;
+  left: 20px;
+  font-size: 16pt;
+  vertical-align: top;
+}
+
+.user-followers{
+  color: #9B9B9B;
+  font-size: 12pt;
+}
+
+
+.button a {
+  text-decoration: none;
+  color: white;
+  
+}
+
+.button{
+  display: inline-block;
+  vertical-align: center;
+  float: right;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 20px;
+  background-color: #F67523;
+
+}
+
+.button:hover{
+  background-color: #C05C1D;
+}
+
+.input-field{
+  font-size: 20pt;
+  width: 60px;
+  font-family: 'Courier New';
+  border-bottom: 1px solid #F67523;
+  background-color: #9B9B9B;
+  margin-bottom: 10px;
+  border-style: none;
+}
+
+#name-field{
+  width: 300px;
+}
+
+
+.form-container{
+  width: 500px;
+  margin: auto;
+  font-size: 20pt;
+  margin-top: 20%;
+  background-color: #9B9B9B;
+  padding: 20px;
+  border-radius-top: 3px;
+}
+
+#update-button-container{
+  width: 540px;
+  margin: auto;
+  
+}
+
+#update-button{
+  
+  width: 540px;
+  border: none;
+  padding: 5px;
+  border-radius-bottom: 3px;
+  background-color: #F67523;
+  color: white;
+  font-family: 'Courier New';
+  font-size: 20pt;
+}
+
+#update-button:hover{
+  background-color: #C05C1D;
+}
