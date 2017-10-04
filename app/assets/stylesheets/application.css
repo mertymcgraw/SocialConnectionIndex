@@ -26,6 +26,16 @@ body {
 
 }
 
+.filters-container{
+  /*color: #9B9B9B;*/
+  font-size: 16pt;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.filter-options:hover{
+  color: #F67523;
+}
 .user-container{
   border-bottom: 1px solid #F67523;
   padding: 20px;
@@ -39,6 +49,10 @@ body {
   text-align: center;
 
 
+}
+
+.user-container{
+  border-top: 1px solid #F67523;;
 }
 
 .user-details{
@@ -75,6 +89,9 @@ body {
 .button:hover{
   background-color: #C05C1D;
 }
+
+
+/*//////////FORM////////////*/
 
 .input-field{
   font-size: 20pt;

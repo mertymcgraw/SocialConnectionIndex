@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
   def index
-    @users = User.sorted_by_social_connection_index.reverse
+    @users = User.sort_by_social_connection_index
+    # # @users = User.sort_by_twitter_followers
+    # @users = User.sort_by_facebook_friends
+
   end 
 
   def edit

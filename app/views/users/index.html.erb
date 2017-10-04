@@ -1,4 +1,14 @@
 <div class='container'>
+  <div class= filters-container>
+    <span id='filter-by'>Filter by:</span>
+    <span class='filter-options' id='rank'> RANK </span>|
+    <span class='filter-options' id='name'> NAME </span>|
+    <span class='filter-options' id='linkedin'> LINKEDIN </span>|
+    <span class='filter-options' id='facebook'> FACEBOOK </span>|
+    <span class='filter-options' id='twitter'> TWITTER </span>
+  </div>
+  
+
   <% @users.each do |user| %>
     <div class='user-container'>
       <div class='connection-index'><%= user.social_connection_index %> </div>
