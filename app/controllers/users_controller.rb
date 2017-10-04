@@ -7,6 +7,21 @@ class UsersController < ApplicationController
   end 
 
   def edit
-    @user = User.find(params[:id])
+    p "**************"
+    p @user = User.find(params[:id])
+    p "**************"
+
   end 
+
+  def update
+    p "I AM IN UPDATE"
+    @user = User.find(params[:id])
+    if @user.update(params[:user].permit(:name, :linkedin_connections, :facebook_friends, :twitter_followers))
+      p "THIS WORKEDDDDDDDDDDD"
+      redirect_to '/'
+    else
+      render 'edit'
+    end
+  end
+
 end
