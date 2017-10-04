@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
 
   def social_connection_index
-
+  
     total_followers = self.linkedin_connections + self.twitter_followers + self.facebook_friends
 
     if total_followers <= 50
@@ -20,5 +20,9 @@ class User < ApplicationRecord
     end 
 
   end 
+
+  def self.sorted_by_social_connection_index
+    User.all.sort_by(&:social_connection_index)
+  end
 
 end

@@ -2866,3 +2866,201 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 45ms (Views: 39.4ms | ActiveRecord: 0.8ms)
 
 
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/users/10/edit" for 127.0.0.1 at 2017-10-04 13:18:09 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 304ms (Views: 223.4ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/users/10" for 127.0.0.1 at 2017-10-04 13:18:12 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9O8Aykfg5wcheLsDq4oHwE1Q3Taghbzi4xGWdTWEmjgCNf5AnicqIyc2NW13gnc+YaJxG1/X/aLVkdCxdLRUdg==", "user"=>{"name"=>"Robb Okuneva", "linkedin_connections"=>"20", "facebook_friends"=>"16", "twitter_followers"=>"21"}, "commit"=>"Update", "id"=>"10"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (141.8ms)[0m  [1m[33mUPDATE "users" SET "twitter_followers" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["twitter_followers", 21], ["updated_at", "2017-10-04 20:18:12.314307"], ["id", 10]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 168ms (ActiveRecord: 145.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 13:18:12 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 83ms (Views: 63.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 13:35:34 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (37.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (200.7ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 120.9ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    1: <div class='container'>
+    2:   <% @users.each do |user| %>
+    3:     <div class='user-container'>
+    4:       <div class='connection-index'><%= user.social_connection_index %> </div>
+    5:       <div class='user-details'><%= user.name.upcase %>
+    6:         <div class='user-followers'>
+    7:           LinkedIn Connections: <%= user.linkedin_connections %><br>
+  
+app/models/user.rb:24:in `social_connection_index'
+app/views/users/index.html.erb:4:in `block in _app_views_users_index_html_erb___360035444879906698_70311777955380'
+app/views/users/index.html.erb:2:in `_app_views_users_index_html_erb___360035444879906698_70311777955380'
+Started GET "/" for 127.0.0.1 at 2017-10-04 13:35:59 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 174ms (Views: 150.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 13:44:47 -0700
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (47.5ms)
+Completed 200 OK in 199ms (Views: 166.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 14:02:48 -0700
+  [1m[35m (23.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 324ms (Views: 119.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 14:04:38 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (12.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 189ms (Views: 99.9ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2017-10-04 14:04:56 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (38.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 206ms (Views: 137.5ms | ActiveRecord: 38.4ms)
+
+
+Started PATCH "/users/4" for 127.0.0.1 at 2017-10-04 14:05:04 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cj4htKDfN+vPSj3TH8BxBTNf5yzGyMSrQuQwgt0i1meiELcWvyED1CWcpRyJYhOKSoeooP7HVoUNY+7Qn1n41g==", "user"=>{"name"=>"Ms. Ramon Johnston", "linkedin_connections"=>"21", "facebook_friends"=>"4", "twitter_followers"=>"100"}, "commit"=>"Update", "id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (23.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (72.2ms)[0m  [1m[33mUPDATE "users" SET "twitter_followers" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["twitter_followers", 100], ["updated_at", "2017-10-04 21:05:04.127399"], ["id", 4]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 122ms (ActiveRecord: 98.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 14:05:04 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (13.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 114ms (Views: 80.8ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-10-04 14:05:19 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 138ms (Views: 116.7ms | ActiveRecord: 2.0ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-10-04 14:05:27 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7fwtMixNWASgF4cdtkb2yZHMpsavfVZxwQ7CSP9eKM5i2AgwGYTSBl9ahxXeYUCnT3HfCX7g1tUnAqyPal/RMw==", "user"=>{"name"=>"Merty McGraw", "linkedin_connections"=>"18", "facebook_friends"=>"20", "twitter_followers"=>"100"}, "commit"=>"Update", "id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (11.9ms)[0m  [1m[33mUPDATE "users" SET "name" = $1, "twitter_followers" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["name", "Merty McGraw"], ["twitter_followers", 100], ["updated_at", "2017-10-04 21:05:27.928911"], ["id", 7]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 30ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 14:05:27 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/7/edit" for 127.0.0.1 at 2017-10-04 14:05:35 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (48.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 175ms (Views: 76.6ms | ActiveRecord: 48.1ms)
+
+
+Started PATCH "/users/7" for 127.0.0.1 at 2017-10-04 14:05:40 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qDNA23S96QxXylC5M7R7iDnNOeEsiez79eAtMzvKhsEnF2XZQXRjDqiHULFbk83m53BALv0UbF8T7EP0rst/PA==", "user"=>{"name"=>"Merty McGraw", "linkedin_connections"=>"0", "facebook_friends"=>"20", "twitter_followers"=>"0"}, "commit"=>"Update", "id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[33mUPDATE "users" SET "linkedin_connections" = $1, "twitter_followers" = $2, "updated_at" = $3 WHERE "users"."id" = $4[0m  [["linkedin_connections", 0], ["twitter_followers", 0], ["updated_at", "2017-10-04 21:05:40.835118"], ["id", 7]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 23ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 14:05:40 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 46ms (Views: 38.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3/edit" for 127.0.0.1 at 2017-10-04 14:07:07 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 260ms (Views: 111.4ms | ActiveRecord: 88.6ms)
+
+
+Started PATCH "/users/3" for 127.0.0.1 at 2017-10-04 14:07:10 -0700
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xzeRubXuPkAnnhlDVeZV7fUfbxSngG8wTmHUsFKA3SN5ZRn+KZSodSmHFnLt8bToCe5G0NBaGHgkcS3i/ExLzQ==", "user"=>{"name"=>"Ashley Brown", "linkedin_connections"=>"400", "facebook_friends"=>"9", "twitter_followers"=>"18"}, "commit"=>"Update", "id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[33mUPDATE "users" SET "twitter_followers" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["twitter_followers", 18], ["updated_at", "2017-10-04 21:07:10.733446"], ["id", 3]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-04 14:07:10 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 40ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
