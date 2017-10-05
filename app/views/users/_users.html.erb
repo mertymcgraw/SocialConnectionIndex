@@ -1,0 +1,13 @@
+<% @users.each do |user| %>
+  <div class='user-container'>
+    <div class='connection-index'><%= user.social_connection_index %> </div>
+    <div class='user-details'><%= user.name.upcase %>
+      <div class='user-followers'>
+        LinkedIn Connections: <%= user.linkedin_connections %><br>
+        Facebook Friends: <%= user.facebook_friends %><br>
+        Twitter Followers: <%= user.twitter_followers %>
+      </div>
+    </div>
+    <div class='button'><%= link_to "edit", edit_user_path(user) %></div>
+  </div>
+<% end  %>
