@@ -4,15 +4,11 @@ class UsersController < ApplicationController
 
     if request.xhr?
       if params[:filter] == "name"
-        @users = User.sort_by_name
-      elsif params[:filter] == "linkedin"
-        @users = User.sort_by_linkedin_connections
-      elsif params[:filter] == "facebook"
-        @users = User.sort_by_facebook_friends
-      elsif params[:filter] == "twitter"
-        @users = User.sort_by_twitter_followers
+        @users = User.sort_by(params[:filter]).reverse
+      elsif params[:filter] == "rank"
+        @users = User.sort_by_social_connection_index
       else
-       @users = User.sort_by_social_connection_index
+        @users = User.sort_by(params[:filter])
       end
       render '_users', layout: false
     end

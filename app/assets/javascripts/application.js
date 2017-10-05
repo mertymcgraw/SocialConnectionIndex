@@ -18,9 +18,7 @@
 $( document ).ready(function() {
   console.log( "ready!" );
   filterBy();
-
 });
-
 
 var filterBy = function(){
   $('.filters-container').on("click", ".filter-options", function(){

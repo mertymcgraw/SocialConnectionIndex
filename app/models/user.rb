@@ -25,21 +25,8 @@ class User < ApplicationRecord
     User.all.sort_by(&:social_connection_index).reverse
   end
 
-  def self.sort_by_name
-    User.all.sort_by(&:name)
+  def self.sort_by(filter)
+    User.all.sort_by(&filter.to_sym).reverse
   end 
-
-  def self.sort_by_linkedin_connections
-    User.all.sort_by(&:linkedin_connections).reverse
-  end 
-
-  def self.sort_by_facebook_friends
-    User.all.sort_by(&:facebook_friends).reverse
-  end 
-
-  def self.sort_by_twitter_followers
-    User.all.sort_by(&:twitter_followers).reverse
-  end 
-
 
 end
