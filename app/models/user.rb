@@ -27,16 +27,18 @@ class User < ApplicationRecord
 
 
   def self.sort_by_social_connection_index
-    User.all.sort_by(&:social_connection_index).reverse
+   User.all.sort_by(&:social_connection_index).reverse
   end
 
   def self.sorted_by(filter)
     if filter == "rank"
       return User.sort_by_social_connection_index
     elsif filter == "name"
-      return User.all.sort_by(&filter.to_sym)
+      return order(filter.to_sym)
     end
-    User.all.sort_by(&filter.to_sym).reverse
+    order(filter.to_sym => :desc)
   end 
+
+
 
 end

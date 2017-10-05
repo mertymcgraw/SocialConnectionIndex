@@ -32,6 +32,11 @@ body {
   margin-bottom: 10px;
 }
 
+.filter-options {
+  text-decoration: none;
+  color: white;
+}
+
 .filter-options:hover{
   color: #F67523;
 }
@@ -154,11 +159,11 @@ body {
   border: none;
   color: white;
   background-color: #4A4A4A;
+  box-shadow: 0 4px 5px -5px white;
 }
 
 #search-bar:focus{
   outline: none;
-  box-shadow: 0 4px 5px -5px white;
 }
 
 #search-submit{
