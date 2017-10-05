@@ -21,6 +21,11 @@ class User < ApplicationRecord
 
   end 
 
+  def self.search(search)
+    where('lower(name) LIKE ?', "%#{search.downcase}%")
+  end
+
+
   def self.sort_by_social_connection_index
     User.all.sort_by(&:social_connection_index).reverse
   end

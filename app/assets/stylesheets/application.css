@@ -27,10 +27,9 @@ body {
 }
 
 .filters-container{
-  /*color: #9B9B9B;*/
   font-size: 16pt;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .filter-options:hover{
@@ -138,4 +137,38 @@ body {
 
 #update-button:hover{
   background-color: #C05C1D;
+}
+
+#search-form {
+  width: 300px;
+  margin-left: 424px;
+ 
+  margin-bottom: 30px
+}
+
+#search-bar {
+  padding-left: 5px;
+  font-size: 16px;
+  height: 25px ;
+  width: 175px;
+  border: none;
+  color: white;
+  background-color: #4A4A4A;
+}
+
+#search-bar:focus{
+  outline: none;
+  box-shadow: 0 4px 5px -5px white;
+}
+
+#search-submit{
+  border: none;
+  color: white;
+  font-family: 'Courier New';
+  font-size: 12pt;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 20px;
+  background-color: #F67523;
+
 }
