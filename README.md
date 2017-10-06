@@ -1,24 +1,22 @@
-# README
+# The Social Connection Index
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app aggregates user's LinkedIn connections, Facebook friends, and twitter followers into a 'social connection index.' The higher a user's number of social connections, the higher their social connection ranking.
 
-Things you may want to cover:
+## Link to Live App
 
-* Ruby version
+## Features
+* Pagination: The site displays 5 users at a time for ease of viewing
+* Filtering: Users can be filtered by any of the following categories (social connection index (aka 'Rank'), Name, LinkedIn Connections, Facebook Friends, or Twitter Followers)
+* Search: A search bar allows you to search for users by name.
+* APIs: Facebook, LinkedIn, Twitter integration still to come.
 
-* System dependencies
+## Social Connection Index aka 'Rank' Calculation
+The rank is determined as follows:
+  1 => 0-50 connections 
+  1.5 => 50-100 connections 
+  5 => 100-200 connections 
+  10 => 200-400 connections
+  15 => 400+ connections
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Technology
+  Ruby on Rails with Ajax for asynchronous filtering 
