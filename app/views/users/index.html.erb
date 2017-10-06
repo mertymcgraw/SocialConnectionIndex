@@ -1,0 +1,25 @@
+<div class='container'>
+  <div class= filters-container>
+    <span id='filter-by'>Filter by:</span>
+    <%= link_to 'RANK', users_path(filter: 'rank'), remote: true, class: 'filter-options', id: 'rank' %> |
+    <%= link_to 'NAME', users_path(filter: 'name'), remote: true, class: 'filter-options' %> |
+    <%= link_to 'LINKEDIN', users_path(filter: 'linkedin_connections'), remote: true, class: 'filter-options' %> |
+    <%= link_to 'FACEBOOK', users_path(filter: 'facebook_friends'), remote: true, class: 'filter-options' %> |
+    
+    <%= link_to 'TWITTER', users_path(filter: 'twitter_followers'), remote: true, class: 'filter-options' %>
+
+  </div>
+
+  <%= form_tag(users_path, method: :get, id:'search-form') do %>
+   <%= text_field_tag :search, params[:search], id:'search-bar', autofocus: true%>
+   <%= submit_tag 'Search', name: nil, id: 'search-submit'%>
+  <% end %>
+
+  <div id='users-container'>
+    <%= render 'users' %>
+  </div>
+  
+
+
+
+</div>

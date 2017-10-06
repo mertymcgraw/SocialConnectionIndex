@@ -1,5 +1,7 @@
 {
   "name": "social_connection_index",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery-ujs": "^1.2.2"
+  }
 }

@@ -13,3 +13,167 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: #4A4A4A;
+  color: white;
+  font-family: 'Courier New';
+}
+
+.container {
+  margin: auto;
+  width: 700px;
+
+}
+
+.filters-container{
+  font-size: 16pt;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.filter-options {
+  text-decoration: none;
+  color: white;
+}
+
+.filter-options:hover{
+  color: #F67523;
+}
+.user-container{
+  border-bottom: 1px solid #F67523;
+  padding: 20px;
+
+}
+
+.connection-index{
+  display: inline-block;
+  width: 50px;
+  font-size: 24pt;
+  text-align: center;
+
+
+}
+
+.user-container{
+  border-top: 1px solid #F67523;;
+}
+
+.user-details{
+  margin-left: 50px;
+  display: inline-block;
+  left: 20px;
+  font-size: 16pt;
+  vertical-align: top;
+}
+
+.user-followers{
+  color: #9B9B9B;
+  font-size: 12pt;
+}
+
+
+.button a {
+  text-decoration: none;
+  color: white;
+  
+}
+
+.button{
+  display: inline-block;
+  vertical-align: center;
+  float: right;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 20px;
+  background-color: #F67523;
+
+}
+
+.button:hover{
+  background-color: #C05C1D;
+}
+
+
+/*//////////FORM////////////*/
+
+.input-field{
+  font-size: 20pt;
+  width: 60px;
+  font-family: 'Courier New';
+  border-bottom: 1px solid #F67523;
+  background-color: #9B9B9B;
+  margin-bottom: 10px;
+  border-style: none;
+}
+
+#name-field{
+  width: 300px;
+}
+
+
+.form-container{
+  width: 500px;
+  margin: auto;
+  font-size: 20pt;
+  margin-top: 20%;
+  background-color: #9B9B9B;
+  padding: 20px;
+  border-radius-top: 3px;
+}
+
+#update-button-container{
+  width: 540px;
+  margin: auto;
+  
+}
+
+#update-button{
+  
+  width: 540px;
+  border: none;
+  padding: 5px;
+  border-radius-bottom: 3px;
+  background-color: #F67523;
+  color: white;
+  font-family: 'Courier New';
+  font-size: 20pt;
+}
+
+#update-button:hover{
+  background-color: #C05C1D;
+}
+
+#search-form {
+  width: 300px;
+  margin-left: 424px;
+ 
+  margin-bottom: 30px
+}
+
+#search-bar {
+  padding-left: 5px;
+  font-size: 16px;
+  height: 25px ;
+  width: 175px;
+  border: none;
+  color: white;
+  background-color: #4A4A4A;
+  box-shadow: 0 4px 5px -5px white;
+}
+
+#search-bar:focus{
+  outline: none;
+}
+
+#search-submit{
+  border: none;
+  color: white;
+  font-family: 'Courier New';
+  font-size: 12pt;
+  padding: 5px;
+  border-radius: 3px;
+  margin-top: 20px;
+  background-color: #F67523;
+
+}
