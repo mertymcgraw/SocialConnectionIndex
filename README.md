@@ -3,6 +3,7 @@
 This app aggregates user's LinkedIn connections, Facebook friends, and twitter followers into a 'social connection index.' The higher a user's number of social connections, the higher their social connection ranking.
 
 ### Link to Live App
+Check it out [here](https://social-connection-index.herokuapp.com/)
 
 ### Features
 * Pagination: The site displays 5 users at a time for ease of viewing
