@@ -15038,3 +15038,16 @@ Processing by UsersController#index as JS
 Completed 200 OK in 21ms (Views: 12.0ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/?filter=facebook_friends&page=2" for 127.0.0.1 at 2017-10-05 21:45:55 -0700
+  [1m[35m (9.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Parameters: {"filter"=>"facebook_friends", "page"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."facebook_friends" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 5], ["OFFSET", 5]]
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  Rendered users/_users.html.erb (661.4ms)
+  Rendered users/index.html.erb within layouts/application (674.3ms)
+Completed 200 OK in 1221ms (Views: 1167.9ms | ActiveRecord: 12.0ms)
+
+

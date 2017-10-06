@@ -29,7 +29,6 @@ body {
 .filters-container{
   font-size: 16pt;
   margin-top: 30px;
-  margin-bottom: 10px;
 }
 
 .filter-options {
@@ -182,7 +181,7 @@ body {
   margin: auto;
   width: 205px;
   margin-top: 20px;
-  
+
 }
 .pagination a {
   text-decoration: none;
