@@ -177,3 +177,23 @@ body {
   background-color: #F67523;
 
 }
+
+.pagination{
+  margin: auto;
+  width: 205px;
+  margin-top: 20px;
+  
+}
+.pagination a {
+  text-decoration: none;
+  color: white;
+}
+
+.pagination a:hover{
+  color: #F67523;
+}
+
+.pagination .current {
+  color: #F67523;
+}
+
